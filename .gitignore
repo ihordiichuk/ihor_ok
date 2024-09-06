@@ -1,0 +1,4 @@
+# created by virtualenv automatically
+!*/             #tells Git to not ignore any directories (/ indicates directories)
+!*.*            #tells Git to not ignore any files with extensions
+#!.gitignore     #ensures the .gitignore file itself is tracked, even if a rule somewhere might try to ignore it
