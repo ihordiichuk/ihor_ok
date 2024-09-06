@@ -18,16 +18,27 @@
 # Створюйте рішення, виходячи з того, що число ЗАВЖДИ 4-хзначне.
 
 
-number = int(input("Please, enter a number of four numbers: "))
+######## Option 1 ########
 
-thousands = number // 1000
-hundreds = (number % 1000) // 100
-tens = (number % 100) // 10
-units = number % 10
+# number = int(input("Please, enter a number of four numbers: "))
+
+# thousands = number // 1000
+# hundreds = (number % 1000) // 100
+# tens = (number % 100) // 10
+# units = number % 10
 
 # print(thousands)
 # print(hundreds)
 # print(tens)
 # print(units)
+
+
+######## Option 2 ########
+
+num = int(input("Please, enter a number of four numbers: "))
+
+thousands, reminder = divmod(num, 1000)
+hundreds, reminder = divmod(reminder, 100)
+tens, units = divmod(reminder, 10)
 
 print(f"{thousands}\n{hundreds}\n{tens}\n{units}")
