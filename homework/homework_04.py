@@ -22,9 +22,9 @@ Copy code
 num_list = [0, 1, 0, 12, 3]
 my_target = 0
 
-for i in range(len(num_list)):
-  if num_list[i] != 0:
-    num_list[my_target], num_list[i] = num_list[i], num_list[my_target]
+for not_zeros in range(len(num_list)):
+  if num_list[not_zeros] != 0:
+    num_list[my_target], num_list[not_zeros] = num_list[not_zeros], num_list[my_target]
     my_target += 1
 
 while my_target < len(num_list):
