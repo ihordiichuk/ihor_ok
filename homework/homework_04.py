@@ -18,8 +18,6 @@ Copy code
 Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 Робити запит на введення даних від користувача не потрібно.
 """
-from idlelib.debugger_r import restart_subprocess_debugger
-
 # num_list = [0, 1, 0, 12, 3]
 # my_target = 0
 #
