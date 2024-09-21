@@ -18,25 +18,21 @@ Copy code
 Для перевірки коректності роботи Вашого коду використовуйте приклади вище.
 Робити запит на введення даних від користувача не потрібно.
 """
+from idlelib.debugger_r import restart_subprocess_debugger
 
-num_list = [0, 1, 0, 12, 3]
-my_target = 0
-
-for not_zeros in range(len(num_list)):
-  if num_list[not_zeros] != 0:
-    num_list[my_target], num_list[not_zeros] = num_list[not_zeros], num_list[my_target]
-    my_target += 1
-
-while my_target < len(num_list):
-  num_list[my_target] = 0
-  my_target += 1
-
-print(num_list)
-
-
-
-# index_positions: list[int] = [i for i, num in enumerate(num_list) if num == target_number]
-
+# num_list = [0, 1, 0, 12, 3]
+# my_target = 0
+#
+# for not_zeros in range(len(num_list)):
+#   if num_list[not_zeros] != 0:
+#     num_list[my_target], num_list[not_zeros] = num_list[not_zeros], num_list[my_target]
+#     my_target += 1
+#
+# while my_target < len(num_list):
+#   num_list[my_target] = 0
+#   my_target += 1
+#
+# print(num_list)
 
 """
 Завдання 2
@@ -61,3 +57,13 @@ Copy code
 Робити запит на введення даних від користувача не потрібно.
 
 """
+
+my_list = [0, 1, 7, 2, 4, 8]
+list_sum = 0
+
+for number in my_list:
+    if number % 2 == 0:         # num % 2 обчислює остачу від ділення числа num на 2, а == 0 перевіряє чи дорівнює отримана остача нулю
+        list_sum += number
+
+result = list_sum * my_list[-1] #-1 використовується для доступу до останнього елемента списку my_list
+print(list_sum)
