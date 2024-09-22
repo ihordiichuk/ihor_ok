@@ -32,6 +32,7 @@ Copy code
 #
 # print(num_list)
 
+
 """
 Завдання 2
 
@@ -56,12 +57,20 @@ Copy code
 
 """
 
-my_list = [0, 1, 7, 2, 4, 8]
-list_sum = 0
-
-for number in my_list:
-    if number % 2 == 0:         # num % 2 обчислює остачу від ділення числа num на 2, а == 0 перевіряє чи дорівнює отримана остача нулю
-        list_sum += number
-
-result = list_sum * my_list[-1] #-1 використовується для доступу до останнього елемента списку my_list
-print(list_sum)
+# my_list = [0, 1, 7, 2, 4, 8]
+# my_list = [1, 3, 5]
+# my_list = [6]
+# my_list = []
+# list_id = 0
+#
+# # verification of empty list
+# if not my_list:
+#     my_list = [0]
+#
+# # get id with even number in my_list by using range with step 2
+# for find_even_numbers in range(0, len(my_list), 2):
+#         list_id += my_list[find_even_numbers]
+#
+# last_num = my_list[-1]
+# result = list_id * last_num
+# print(result)
