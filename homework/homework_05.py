@@ -39,7 +39,18 @@ m3 => True
 #     be any of the registered words.
 
 user_do = input("Enter your: ")
-if user_do
+for user_input in user_do:
+    if user_do[0].isdigit():
+        result = ("Can not beging from a number!")
+    elif user_do.isnumeric():
+        result = ("Can not be numeric only")
+    elif user_do.isupper():
+        result = ("Can not contain capital letters")
+    elif user_do.isspace():
+        result = ("Can not have spaces")
+   # elif user_do # re.search() or find()
+    else:
+        result = (print("You entered: ", user_do))
 
     #     result = ("Restricted to begin with a digit")
     # elif user_do.isdigit(user_do):
@@ -48,6 +59,7 @@ if user_do
 
 print(result)
 
+####
 
 
 
