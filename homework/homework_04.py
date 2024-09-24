@@ -61,6 +61,7 @@ Copy code
 # my_list = [1, 3, 5]
 # my_list = [6]
 # my_list = []
+# ##
 # list_id = 0
 #
 # # verification of empty list
