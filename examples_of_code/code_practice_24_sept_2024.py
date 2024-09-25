@@ -32,18 +32,21 @@ from operator import index
 # friend_list.remove('Vasya')
 # print(friend_list)
 
-
-people_list = ['Nadia', 'Ghandi', 'Odin']
+#
+# people_list = ['Nadia', 'Ghandi', 'Odin']
 # for people in people_list:
 #     message = f"Hello, my friends {people.capitalize()}"
 #     print(message)
 # print(f'I was waiting you.The list of my guests is {people_list}')
-people_list.remove("Ghandi")
-people_list.extend(['vika', 'yulia', 'sasha'])
+# people_list.remove("Ghandi")
+# people_list.extend(['vika', 'yulia', 'sasha'])
 # new_list = ['vika'], ['yulia'], ['sasha']
 # people_list.append(new_list)
-print(people_list)
+# print(people_list)
 # for people in people_list:
 #     message = f"Hello, my friends {people.capitalize()}! Ghandi left our party!"
 #     print(message)
+
+
+
 
