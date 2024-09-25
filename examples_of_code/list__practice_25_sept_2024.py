@@ -64,6 +64,10 @@ items_list = [2, 2]
 # for list in sample_list:
 #     if len(list) > 1 and list[0] == list[-1]:
 #         count += 1
+#
+# print(count)
+
+## or ##
 
 # Count matching strings using a list comprehension
 # count = len([s for s in sample_list if len(s) > 1 and s[0] == s[-1]])
