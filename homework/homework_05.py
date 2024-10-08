@@ -83,7 +83,7 @@ system_questions = [ 'Enter first number: ', 'Enter operator (+, -, *, or /): ',
 def ask_user(system_questions):
     input_answers = {}
     for question in system_questions:
-        input_answers[system_questions] = input(question + ": ")
+        input_answers[system_questions] = input(system_questions + ": ")
     return input_answers
 
 while True:
@@ -94,7 +94,7 @@ while True:
     else:
         print("This is not a number!",)
         try_again = input('Do you want to try again? Type y if yes and n if no: ')
-        if try_again.lower() != 'y':
+        if try_again.lower() != 'y' or 'yes':
             break
 
 # check operator for a logic symbol
