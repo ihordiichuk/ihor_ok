@@ -78,62 +78,56 @@ m3 => True
 #
 # number_1, oper_sign, number_2 = input("Enter calculation (e.g., 5 + 3): ").split()
 # number_1, number_2 = int(number_1), int(number_2)
-system_questions = [ 'Enter first number: ', 'Enter operator (+, -, *, or /): ', 'Enter second number: ']
-
-def ask_user(system_questions):
-    input_answers = {}
-    for question in system_questions:
-        input_answers[system_questions] = input(system_questions + ": ")
-    return input_answers
+#
+#
+first_number = input("Enter first number: ")
+operator_list = input("Enter operator from a list (+, -, *, /): ")
+last_number = input("Enter last number: ")
 
 while True:
-# check first number for a digit
-    user_input = input(system_questions[0])
-    if user_input.isdigit():
-        break
+
+    if not first_number.isdigit() or not last_number.isdigit():
+        print("You are typing not a number!")
+    elif operator_list not in ("+", "-", "*", "/"):
+        print("You are typing not supported operator!")
     else:
-        print("This is not a number!",)
-        try_again = input('Do you want to try again? Type y if yes and n if no: ')
-        if try_again.lower() != 'y' or 'yes':
-            break
+        first_number = int(first_number)
+        last_number = int(last_number)
 
-# check operator for a logic symbol
-    system_operator = input(system_questions[1])
-    valid_operators = ['+', '-', '*', '/']
-    if system_operator in valid_operators:
-        break  # Exit the loop if both inputs are valid
-    else:
-        print("Invalid operator. Please enter +, -, *, or /")
 
-# check second number for a digit
-    user_input = input(system_questions[2])
-    if user_input.isdigit():
-        break
-    else:
-        print("This is not a number!",)
-        try_again = input('Do you want to try again? Type y if yes and n if no: ')
-        if try_again.lower() != 'y':
-            break
+        if operator_list == "+":
+            result = first_number + last_number
 
-# user_answers = ask_user(system_questions)
-# print('You typed: ', user_answers)
+        elif operator_list == "-":
+            result = first_number - last_number
 
-# Словник операторів з lambda функціями
-operations = {
-    "add": lambda a, b: a + b,
-    "subtract": lambda a, b: a - b,
-    "multiply": lambda a, b: a * b,
-    "divide": lambda a, b: a / b if b != 0 else "Division by zero error",
-}
+        elif operator_list == "*":
+            result = first_number * last_number
 
-# Функція для виконання операції
-def perform_operation(operation, a, b):
-    return operations.get(operation, lambda a, b: "Unknown operation")(a, b)
+        elif operator_list == "/":
+            if first_number == 0:
+                print("Error! Cannot divide by 0!!!")
+            else:
+                # print("result: ", (first_number / last_number))
+                result = first_number / last_number
 
-# Виклик функції
-# result = perform_operation("multiply", 10, 5)
-# print(result)
+        print(result)
 
-end_question = input('Do you want to continue? YES or NO: ')
-if end_question == 'YES':
-    print("Good bye!")
+    user_choise = input("Enter 'q' to quit or 'p' to proceed: ")
+    for u in user_choise:
+        if user_choise == 'q':
+            continue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
