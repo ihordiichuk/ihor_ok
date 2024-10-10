@@ -74,60 +74,39 @@ m3 => True
 обчислення - якщо користувач ввів yes (можна просто y), то нове обчислення, інакше - закінчення роботи.
 
 """
-#
-#
-# number_1, oper_sign, number_2 = input("Enter calculation (e.g., 5 + 3): ").split()
-# number_1, number_2 = int(number_1), int(number_2)
-#
-#
-first_number = input("Enter first number: ")
-operator_list = input("Enter operator from a list (+, -, *, /): ")
-last_number = input("Enter last number: ")
+
+def perform_calculations(first_number, operator_list, last_number):
+    if operator_list == "+":
+        return first_number + last_number
+    elif operator_list == "-":
+        return first_number - last_number
+    elif operator_list == "*":
+        return first_number * last_number
+    elif operator_list == "/":
+        if last_number == 0:
+            return "Error! Cannot divide by 0!"
+        else:
+            return first_number / last_number
 
 while True:
+    first_number = input("Enter first number: ")
+    operator_list = input("Enter operator from a list (+, -, *, /): ")
+    last_number = input("Enter last number: ")
 
     if not first_number.isdigit() or not last_number.isdigit():
-        print("You are typing not a number!")
-    elif operator_list not in ("+", "-", "*", "/"):
-        print("You are typing not supported operator!")
-    else:
-        first_number = int(first_number)
-        last_number = int(last_number)
+        print("Error: You are typing not a number! Please try again.")
+        continue
 
+    first_number = int(first_number)
+    last_number = int(last_number)
 
-        if operator_list == "+":
-            result = first_number + last_number
+    result = perform_calculations(first_number, operator_list, last_number)
+    print(f"Result: {result}")
 
-        elif operator_list == "-":
-            result = first_number - last_number
-
-        elif operator_list == "*":
-            result = first_number * last_number
-
-        elif operator_list == "/":
-            if first_number == 0:
-                print("Error! Cannot divide by 0!!!")
-            else:
-                # print("result: ", (first_number / last_number))
-                result = first_number / last_number
-
-        print(result)
-
-    user_choise = input("Enter 'q' to quit or 'p' to proceed: ")
-    for u in user_choise:
-        if user_choise == 'q':
-            continue
-
-
-
-
-
-
-
-
-
-
-
+    user_choice = input("Enter 'q' to quit or 'p' to proceed: ").strip().lower()
+    if user_choice == 'q':
+        print("Good Bye!")
+        break
 
 
 
