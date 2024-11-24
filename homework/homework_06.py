@@ -108,57 +108,6 @@
 # {1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
 
 ###############################
-
-# my_dict_1 = {1: 1, 2: 2, 3: 3}
-# my_dict_2 = {11: 11, 2: 22}
-# my_dict_3 = {}
-#
-# # a) Create a list of keys that exist in both dictionaries.
-# # using intersection() as symbol & with .keys()
-#
-# com_keys = my_dict_1.keys() & my_dict_2.keys()
-# task_a_list = {key: (my_dict_1[key], my_dict_2[key]) for key in com_keys}
-#
-# print("The list of keys that exist in both dictionaries: ", task_a_list)
-#
-# # b) Create a list of keys that exist in the first dictionary but not in the second.
-#
-# # task_b_list = list(set(my_dict_1.keys()) - set(my_dict_2.keys()))
-# task_b_list = {key: set(my_dict_1.keys()) - set(my_dict_2.keys()) for key in com_keys}
-# print("The list of keys that exist in the first dictionary but not in the second: ",task_b_list)
-#
-# # c) Create a new dictionary with key-value pairs from the first dictionary where the keys are not in the second dictionary
-#
-# # show_keys = my_dict_1.keys() - my_dict_2.keys()
-# # task_c_list = {key: set(my_dict_1.keys()) - set(my_dict_2.keys()) for key in show_keys}
-# task_c_list = {key: my_dict_1[key] for key in my_dict_1.keys() - my_dict_2.keys()}
-# print("The new dictionary with key-value pairs", task_c_list)
-#
-# # d) Merge both dictionaries into a new dictionary with the following rule:
-# # If the key exists in only one of the dictionaries, include it as a normal key-value pair.
-# # If the key exists in both dictionaries, include it as {key: [value_from_first_dict, value_from_second_dict]}.
-#
-# # merge_dict = {}
-# # task_d_list = {key:  merge_dict[key] for key in set(my_dict_1.keys()) | set(my_dict_2.keys())}
-# # print(task_d_list)
-#
-# keys_1 = set(my_dict_1.keys())
-# keys_2 = set(my_dict_2.keys())
-# # union of both sets
-# all_keys = keys_1 | keys_2
-#
-# print(all_keys)
-#
-# for key in all_keys:
-#     if key in my_dict_1 and key in my_dict_2:
-#         my_dict_3[key] = [my_dict_1[key], my_dict_2[key]]
-#     elif key in my_dict_1:
-#         my_dict_3[key] = my_dict_1[key]
-#     elif key in my_dict_2:
-#         my_dict_3[key] = my_dict_2[key]
-# print(f"Merged dictionary: {my_dict_3}")
-#
-
 #
 # my_dict_1 = {1: 1, 2: 2}
 # my_dict_2 = {11: 11, 2: 22}
